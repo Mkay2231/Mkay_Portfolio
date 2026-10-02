@@ -539,6 +539,16 @@
           min-height: 0;
         }
       }
+      .project-links .btn.disabled {
+        background: transparent;
+        border: 1px solid #ffffff22;
+        color: #ffffff66;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+      .project-links .btn.disabled:hover {
+        transform: none;
+      }
     </style>
   </head>
   <body>
@@ -563,14 +573,14 @@
           <div class="project-links">
             <a
               class="btn primary"
-              href="#"
-              aria-label="View live WadeScribe project"
-              >↗ View Live Project</a
-            ><a
-              class="btn secondary"
               href="WadeScribe Mobile Prototype.html"
               aria-label="View WadeScribe prototype"
               >↗ View Prototype</a
+            ><span
+              class="btn secondary disabled"
+              aria-disabled="true"
+              title="Link coming soon"
+              >↗ View Live Project</span
             >
           </div>
           <div class="meta">

@@ -556,6 +556,16 @@
           grid-template-columns: 1fr;
         }
       }
+      .project-links .btn.disabled {
+        background: transparent;
+        border: 1px solid #ffffff22;
+        color: #ffffff66;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+      .project-links .btn.disabled:hover {
+        transform: none;
+      }
     </style>
   </head>
   <body>
@@ -578,15 +588,23 @@
             through a simple digital experience.
           </p>
           <div class="project-links">
-            <a class="btn primary" href="#" aria-label="View live Kynda project"
-              >↗ View Live Project</a
-            ><a class="btn secondary" href="#" aria-label="View Kynda prototype"
+            <a
+              class="btn primary"
+              href="https://www.figma.com/proto/6PSZhsmwblu7pYazG34og5/KYNDA-UI?page-id=69%3A6815&amp;node-id=95-28739&amp;viewport=448%2C566%2C0.31&amp;t=icliLNrcjr6FKMHq-1&amp;scaling=min-zoom&amp;content-scaling=fixed&amp;starting-point-node-id=95%3A28739"
+              target="_blank"
+              rel="noopener"
+              aria-label="View Kynda prototype in Figma"
               >↗ View Prototype</a
-            ><a
-              class="btn secondary"
-              href="#"
-              aria-label="View Kynda project files"
-              >↗ Project Files</a
+            ><span
+              class="btn secondary disabled"
+              aria-disabled="true"
+              title="Link coming soon"
+              >↗ View Live Project</span
+            ><span
+              class="btn secondary disabled"
+              aria-disabled="true"
+              title="Link coming soon"
+              >↗ Project Files</span
             >
           </div>
           <div class="meta">
