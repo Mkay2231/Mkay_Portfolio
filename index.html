@@ -814,6 +814,16 @@
         margin: 0 !important;
         transform: none !important;
       }
+      .project.disabled {
+        opacity: 0.45;
+        filter: grayscale(1);
+        cursor: not-allowed;
+        box-shadow: none;
+      }
+      .project.disabled:hover {
+        transform: none;
+        box-shadow: none;
+      }
     </style>
   </head>
   <body>
@@ -1001,10 +1011,10 @@
                 </div>
                 <span class="project-arrow">↗</span>
               </div></a
-            ><a class="project reveal scale" href="#"
+            ><div class="project reveal scale disabled" aria-disabled="true"
               ><div class="project-visual">
                 <div class="placeholder">
-                  <b>MORE WORK</b><span>Drop project screenshot here</span>
+                  <b>MORE WORK</b><span>Coming soon</span>
                 </div>
               </div>
               <div class="project-info">
@@ -1013,7 +1023,7 @@
                   <div class="project-cat">UI/UX · Product design</div>
                 </div>
                 <span class="project-arrow">↗</span>
-              </div></a
+              </div></div
             >
           </div>
         </div>
