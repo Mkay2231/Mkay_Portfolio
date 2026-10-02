@@ -539,6 +539,47 @@
           min-height: 0;
         }
       }
+      .project-links .btn.disabled {
+        background: transparent;
+        border: 1px solid #ffffff22;
+        color: #ffffff66;
+        cursor: not-allowed;
+        pointer-events: none;
+      }
+      .project-links .btn.disabled:hover {
+        transform: none;
+      }
+      .gallery.desktops {
+        grid-template-columns: 1fr 1fr;
+      }
+      .gallery.desktops .screen {
+        grid-column: auto;
+        min-height: 0;
+        margin: 0;
+      }
+      .gallery.desktops .screen img {
+        border-radius: 12px;
+      }
+      .admin-lead {
+        margin: 55px 0 0;
+        background: #e9e6e0;
+        border-radius: 22px;
+        padding: 9px;
+      }
+      .admin-lead img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+      }
+      .admin-lead + .gallery {
+        margin-top: 18px;
+      }
+      @media (max-width: 560px) {
+        .gallery.desktops {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
@@ -546,7 +587,8 @@
       <a class="logo" href="index.html">MKAY</a>
       <div class="nav-links">
         <a href="#overview">Overview</a><a href="#flow">Flow</a
-        ><a href="#screens">Screens</a><a href="#process">Process</a
+        ><a href="#screens">Screens</a><a href="#admin">Admin</a
+        ><a href="#process">Process</a
         ><a class="back" href="index.html#work">← Back to work</a>
       </div>
     </nav>
@@ -561,8 +603,24 @@
             from one place.
           </p>
           <div class="project-links">
-            <a class="btn primary" href="#flow">↓ See the flow</a
-            ><a class="btn secondary" href="#screens">↓ See all screens</a>
+            <a
+              class="btn primary"
+              href="https://www.figma.com/proto/ZGiezIhKQTjHljBTV8zhfP/RACool-Hub-%E2%80%94-Product-Design?node-id=4-4&amp;viewport=107%2C376%2C0.36&amp;t=c0GTZtMGuwMpMxw7-1&amp;scaling=contain&amp;content-scaling=fixed&amp;starting-point-node-id=4%3A4&amp;page-id=4%3A2"
+              target="_blank"
+              rel="noopener"
+              aria-label="View RacoolHub prototype in Figma"
+              >↗ View Prototype</a
+            ><span
+              class="btn secondary disabled"
+              aria-disabled="true"
+              title="Link coming soon"
+              >↗ View Live Project</span
+            ><span
+              class="btn secondary disabled"
+              aria-disabled="true"
+              title="Link coming soon"
+              >↗ Project Files</span
+            >
           </div>
           <div class="meta">
             <div><label>Role</label><strong>Product Designer</strong></div>
@@ -917,9 +975,104 @@
         </div>
       </div>
     </section>
+    <section class="section" id="admin">
+      <div class="container">
+        <div class="eyebrow">06 · Admin dashboard</div>
+        <h2>The operator's side of the network.</h2>
+        <div class="intro-grid">
+          <div>
+            <p class="copy">
+              Behind the app is a web dashboard for the team running the
+              network. The Overview answers the first questions of the day:
+              how many people are connected, how much revenue came in, and
+              which hotspots need attention.
+            </p>
+          </div>
+          <div>
+            <p class="copy">
+              Each section of the sidebar has its own page, built on the same
+              design system as the mobile app. Status is always an icon plus a
+              word, never colour alone. All figures shown are demo data.
+            </p>
+          </div>
+        </div>
+        <figure class="screen admin-lead">
+          <img
+            src="images/racoolhub/admin/overview.webp"
+            alt="RacoolHub admin Overview with KPIs, revenue chart, system alerts and payment summary"
+            width="1440"
+            height="900"
+            loading="lazy"
+          />
+          <figcaption>01 · Overview</figcaption>
+        </figure>
+        <div class="gallery desktops">
+          <figure class="screen">
+            <img
+              src="images/racoolhub/admin/hotspots.webp"
+              alt="RacoolHub admin Hotspots: hotspot status, active users, revenue and data sold"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>02 · Hotspots</figcaption>
+          </figure>
+          <figure class="screen">
+            <img
+              src="images/racoolhub/admin/transactions.webp"
+              alt="RacoolHub admin Transactions: payments by status with the provider reference"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>03 · Transactions</figcaption>
+          </figure>
+          <figure class="screen">
+            <img
+              src="images/racoolhub/admin/users.webp"
+              alt="RacoolHub admin Users: users with verification status and wallet balance"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>04 · Users</figcaption>
+          </figure>
+          <figure class="screen">
+            <img
+              src="images/racoolhub/admin/connections.webp"
+              alt="RacoolHub admin Connections: live connections with session usage and what is left"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>05 · Connections</figcaption>
+          </figure>
+          <figure class="screen">
+            <img
+              src="images/racoolhub/admin/wallet.webp"
+              alt="RacoolHub admin Wallet: wallet balances and top-ups"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>06 · Wallet</figcaption>
+          </figure>
+          <figure class="screen">
+            <img
+              src="images/racoolhub/admin/reports.webp"
+              alt="RacoolHub admin Reports: revenue and data sold by plan, with downloads"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>07 · Reports</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
     <section class="section dark" id="process">
       <div class="container">
-        <div class="eyebrow">06 · Design process</div>
+        <div class="eyebrow">07 · Design process</div>
         <h2>From one loop to a full product.</h2>
         <div class="process">
           <div class="step">
@@ -956,7 +1109,7 @@
     <section class="section">
       <div class="container takeaways">
         <div>
-          <div class="eyebrow">07 · Key decisions</div>
+          <div class="eyebrow">08 · Key decisions</div>
           <h2>Small details matter.</h2>
           <p class="copy">
             The decisions that shaped RacoolHub are mostly about trust: knowing
