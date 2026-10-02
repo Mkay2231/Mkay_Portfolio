@@ -483,6 +483,79 @@
           justify-content: center;
         }
       }
+      /* Screenshots */
+      .hero-shot img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
+      }
+      .feature-visual img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .gallery.phones {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .gallery.phones.five {
+        grid-template-columns: repeat(5, 1fr);
+      }
+      .gallery.phones .screen {
+        grid-column: auto;
+        min-height: 0;
+        margin: 0;
+      }
+      .screen img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 15px;
+      }
+      .screen figcaption {
+        font: 500 10px DM Mono;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--muted);
+        padding: 12px 4px 3px;
+      }
+      @media (max-width: 900px) {
+        .gallery.phones,
+        .gallery.phones.five {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+      @media (max-width: 560px) {
+        .gallery.phones,
+        .gallery.phones.five {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        .gallery.phones .screen {
+          min-height: 0;
+        }
+      }
+      .feature h3 {
+        color: var(--ink);
+      }
+      .gallery.desktops {
+        grid-template-columns: 1fr 1fr;
+      }
+      .gallery.desktops .screen {
+        grid-column: auto;
+        min-height: 0;
+        margin: 0;
+      }
+      .gallery.desktops .screen img {
+        border-radius: 12px;
+      }
+      @media (max-width: 560px) {
+        .gallery.desktops {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
   <body>
@@ -527,10 +600,12 @@
           </div>
         </div>
         <div class="hero-shot">
-          <div class="placeholder">
-            <b>KYNDA</b
-            ><span>Hero product screenshot<br />Drop image here</span>
-          </div>
+          <img
+            src="images/kynda-cover.webp"
+            alt="Kynda parent dashboard on desktop and parent home on mobile"
+            width="1080"
+            height="1350"
+          />
         </div>
       </div>
     </header>
@@ -578,16 +653,19 @@
         <h2>Simple enough to keep learning moving.</h2>
         <p class="copy">
           The interface direction centered on clear hierarchy, accessible
-          content and straightforward navigation. The final case study can be
-          expanded with the exact product flows and decisions from the original
-          team work.
+          content and straightforward navigation, with separate experiences
+          for students, parents and tutors built on one shared system.
         </p>
         <div class="feature-grid">
           <article class="feature">
             <div class="feature-visual">
-              <div class="placeholder">
-                <b>LEARN</b><span>Learning experience screenshot</span>
-              </div>
+              <img
+                src="images/kynda/feature-learn.webp"
+                alt="Kynda lesson page with video and learning objectives"
+                width="1440"
+                height="900"
+                loading="lazy"
+              />
             </div>
             <div class="feature-text">
               <h3>Learning experience</h3>
@@ -599,9 +677,13 @@
           </article>
           <article class="feature">
             <div class="feature-visual">
-              <div class="placeholder">
-                <b>CONTENT</b><span>Content screen screenshot</span>
-              </div>
+              <img
+                src="images/kynda/feature-content.webp"
+                alt="Kynda course curriculum grouped by week"
+                width="1440"
+                height="900"
+                loading="lazy"
+              />
             </div>
             <div class="feature-text">
               <h3>Clear content hierarchy</h3>
@@ -613,9 +695,13 @@
           </article>
           <article class="feature">
             <div class="feature-visual">
-              <div class="placeholder">
-                <b>PROGRESS</b><span>Progress screen screenshot</span>
-              </div>
+              <img
+                src="images/kynda/feature-progress.webp"
+                alt="Kynda parent dashboard with learning progress"
+                width="1440"
+                height="900"
+                loading="lazy"
+              />
             </div>
             <div class="feature-text">
               <h3>Progress & continuity</h3>
@@ -627,9 +713,13 @@
           </article>
           <article class="feature">
             <div class="feature-visual">
-              <div class="placeholder">
-                <b>RESPONSIVE</b><span>Responsive UI screenshot</span>
-              </div>
+              <img
+                src="images/kynda/feature-responsive.webp"
+                alt="Kynda parent dashboard on desktop next to the mobile home"
+                width="1600"
+                height="1000"
+                loading="lazy"
+              />
             </div>
             <div class="feature-text">
               <h3>Responsive interface</h3>
@@ -647,37 +737,91 @@
         <div class="eyebrow">03 · Product screens</div>
         <h2>The interface in context.</h2>
         <p class="copy">
-          Use these prepared slots for the final Kynda screenshots, Figma
-          exports or selected implementation views. The gallery is intentionally
-          flexible so the strongest screens can be featured later.
+          Screens from the Kynda designs across all three roles: onboarding,
+          the student's sessions, the parent's dashboard and approvals, and the
+          tutor's earnings and profile.
         </p>
-        <div class="gallery">
-          <div class="screen">
-            <div class="placeholder"><b>01</b><span>Landing / Home</span></div>
-          </div>
-          <div class="screen">
-            <div class="placeholder">
-              <b>02</b><span>Learning dashboard</span>
-            </div>
-          </div>
-          <div class="screen">
-            <div class="placeholder"><b>03</b><span>Course / lesson</span></div>
-          </div>
-          <div class="screen">
-            <div class="placeholder"><b>04</b><span>Content view</span></div>
-          </div>
-          <div class="screen">
-            <div class="placeholder"><b>05</b><span>Progress</span></div>
-          </div>
-          <div class="screen">
-            <div class="placeholder"><b>06</b><span>Profile</span></div>
-          </div>
-          <div class="screen">
-            <div class="placeholder"><b>07</b><span>Responsive view</span></div>
-          </div>
-          <div class="screen">
-            <div class="placeholder"><b>08</b><span>UI detail</span></div>
-          </div>
+        <div class="gallery desktops">
+          <figure class="screen">
+            <img
+              src="images/kynda/onboarding.webp"
+              alt="Choose whether you are a student, parent or tutor"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>01 · Onboarding</figcaption>
+          </figure>
+          <figure class="screen">
+            <img
+              src="images/kynda/sign-up.webp"
+              alt="Create a Kynda account"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>02 · Sign up</figcaption>
+          </figure>
+          <figure class="screen">
+            <img
+              src="images/kynda/my-learning.webp"
+              alt="Student view of enrolled sessions"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>03 · Enrolled sessions</figcaption>
+          </figure>
+          <figure class="screen">
+            <img
+              src="images/kynda/student-sessions.webp"
+              alt="Student sessions with confirmed, pending and cancelled states"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>04 · My sessions</figcaption>
+          </figure>
+          <figure class="screen">
+            <img
+              src="images/kynda/parent-dashboard.webp"
+              alt="Parent dashboard with sessions, hours, spend and approvals"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>05 · Parent dashboard</figcaption>
+          </figure>
+          <figure class="screen">
+            <img
+              src="images/kynda/parent-approvals.webp"
+              alt="Parent approval requests table"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>06 · Approvals</figcaption>
+          </figure>
+          <figure class="screen">
+            <img
+              src="images/kynda/tutor-earnings.webp"
+              alt="Tutor earnings and recent transactions"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>07 · Tutor earnings</figcaption>
+          </figure>
+          <figure class="screen">
+            <img
+              src="images/kynda/tutor-profile.webp"
+              alt="Tutor profile, subjects and availability"
+              width="1200"
+              height="750"
+              loading="lazy"
+            />
+            <figcaption>08 · Tutor profile</figcaption>
+          </figure>
         </div>
       </div>
     </section>
